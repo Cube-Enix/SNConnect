@@ -1,18 +1,6 @@
 {
 	"1": {
-		"id": "CloudLink Public Test Link",
+		"id": "SNConnect Public Test Link",
 		"url": "wss://cloudlink-sample-server.mikedev101.repl.co/"
-	},
-	"2": {
-		"id": "@CST1229's 30-Day Server",
-		"url": "wss://cloudserver1.cst1229.repl.co/"
-	},
-	"3": {
-		"id": "silvxrserver",
-		"url": "wss://server.silvxrcat.repl.co"
-	},
-	"4": {
-		"id": "@RandomCocconut - Another wss:// server",
-		"url": "wss://CloudLink-Sample-Server-2.randomcocconut1.repl.co"
 	}
 }

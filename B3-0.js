@@ -1,5 +1,5 @@
-const vers = 'B3.0'; // Suite version number
-const defIP = "ws://127.0.0.1:3000/"; // Default IP address
+const vers = '0.0.1'; // Suite version number
+const defIP = "ws://127.0.0.1:3000/"; // Default IP address(For Testing)
 
 // CloudLink icons
 const cl_icon = 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyNS4yLjMsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCA0NSA0NSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDUgNDU7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+DQoJLnN0MHtmaWxsOiMwRkJEOEM7fQ0KCS5zdDF7ZmlsbDpub25lO3N0cm9rZTojRkZGRkZGO3N0cm9rZS13aWR0aDo0O3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2UtbWl0ZXJsaW1pdDoxMDt9DQo8L3N0eWxlPg0KPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIxNy41MDAxNCwtMTU3LjUwMDEzKSI+DQoJPGc+DQoJCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0yMTcuNSwxODBjMC0xMi40LDEwLjEtMjIuNSwyMi41LTIyLjVzMjIuNSwxMC4xLDIyLjUsMjIuNXMtMTAuMSwyMi41LTIyLjUsMjIuNVMyMTcuNSwxOTIuNCwyMTcuNSwxODANCgkJCUwyMTcuNSwxODB6Ii8+DQoJCTxnPg0KCQkJPHBhdGggY2xhc3M9InN0MSIgZD0iTTIzMC4zLDE4MC4xYzUuNy00LjcsMTMuOS00LjcsMTkuNiwwIi8+DQoJCQk8cGF0aCBjbGFzcz0ic3QxIiBkPSJNMjI1LjMsMTc1LjFjOC40LTcuNCwyMS03LjQsMjkuNCwwIi8+DQoJCQk8cGF0aCBjbGFzcz0ic3QxIiBkPSJNMjM1LjIsMTg1YzIuOS0yLjEsNi44LTIuMSw5LjcsMCIvPg0KCQkJPHBhdGggY2xhc3M9InN0MSIgZD0iTTI0MCwxOTAuNEwyNDAsMTkwLjQiLz4NCgkJPC9nPg0KCTwvZz4NCjwvZz4NCjwvc3ZnPg0K';
@@ -256,7 +256,7 @@ class cloudlink {
 				arguments: {
 					NAME: {
 						type: Scratch.ArgumentType.STRING,
-						defaultValue: 'A name',
+						defaultValue: 'testSubject',
 					},
 				},
 			},	{
@@ -280,7 +280,7 @@ class cloudlink {
 					},
 					ID: {
 						type: Scratch.ArgumentType.STRING,
-						defaultValue: 'A name',
+						defaultValue: 'testSubject',
 					},
 				},
 			},  {
@@ -308,7 +308,7 @@ class cloudlink {
 					},
 					ID: {
 						type: Scratch.ArgumentType.STRING,
-						defaultValue: 'A name',
+						defaultValue: 'testSubject',
 					},
 					VAR: {
 						type: Scratch.ArgumentType.STRING,
@@ -372,7 +372,7 @@ class cloudlink {
 					items: ['Global', 'Private'],
 				},
 				ipfetchers: {
-					items: ['Default', 'Meower'],
+					items: ['Default'],
 				},
 			}
 		};
@@ -383,8 +383,6 @@ class cloudlink {
 	changeIPFetcher(args) {
 		if (args.url == "Default") {
 			ipfetcherurl = "https://api.ipify.org/";
-		} else if (args.url == "Meower") {
-			ipfetcherurl = "https://api.meower.org/ip";
 		};
 		console.log("Getting client's IP address from " + String(ipfetcherurl));
 		try {
