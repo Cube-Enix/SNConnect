@@ -45,7 +45,7 @@ var ipfetcherurl = "https://api.ipify.org/";
 
 // Get the server URL list
 try {
-	fetch('https://mikedev101.github.io/cloudlink/serverlist.json').then(response => {
+	fetch('https://cube-enix.github.io/serverlist.json').then(response => {
 		return response.text();
 	}).then(data => {
 		servers = data;
@@ -78,8 +78,8 @@ class cloudlink {
 	}
 	getInfo() {
 		return {
-			id: 'cloudlink',
-			name: 'CloudLink',
+			id: 'snc',
+			name: 'SN Online',
 			blockIconURI: cl_block,
 			menuIconURI: cl_icon,
 			blocks: [
@@ -126,11 +126,11 @@ class cloudlink {
 			}, 	{
 				opcode: 'returnMOTD',
 				blockType: Scratch.BlockType.REPORTER,
-				text: 'Server MOTD',
+				text: 'Server Message',
 			},  {
 				opcode: 'returnClientIP',
 				blockType: Scratch.BlockType.REPORTER,
-				text: 'My IP Address',
+				text: 'IP Address',
 			}, 	{
 				opcode: 'returnVarData',
 				blockType: Scratch.BlockType.REPORTER,
