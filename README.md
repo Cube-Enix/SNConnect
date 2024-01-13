@@ -1,3 +1,6 @@
+# ⚠️ URGENT ⚠️
+This version of SNConnect is broken and thus deprecated. Please us the version available on our website!
+
 # SNConnect (Powered by CloudLink)
 
 SNConnect is a cloudlink fork created specifically to run SNext Servers and allow developers to connect to them. It uses repl WebSockets instead of IP Addresses.
